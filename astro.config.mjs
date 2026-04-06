@@ -2,9 +2,11 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
+const isProd = process.env.NODE_ENV === 'production' || process.env.CI === 'true';
+
 export default defineConfig({
   site: 'https://asrajavel.github.io',
-  base: '/iskcon-tuticorin',
+  base: isProd ? '/iskcon-tuticorin' : '/',
   vite: {
     plugins: [tailwindcss()],
   },
