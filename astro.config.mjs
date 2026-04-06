@@ -6,7 +6,7 @@ const isProd = process.env.NODE_ENV === 'production' || process.env.CI === 'true
 
 export default defineConfig({
   site: 'https://asrajavel.github.io',
-  base: isProd ? '/iskcon-tuticorin' : '/',
+  base: isProd ? '/iskcon-thoothukudi' : '/',
   vite: {
     plugins: [tailwindcss()],
   },
