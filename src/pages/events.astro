@@ -1,53 +1,83 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 const events = [
   {
-    title: 'Janmashtami 2026',
-    date: 'August 14, 2026',
+    title: 'Sri Krishna Janmashtami',
+    date: 'August 2026',
     time: '4:00 PM - 12:30 AM',
-    description: 'Grand celebration of Lord Krishna\'s appearance day. Join us for an evening of kirtan, drama performances depicting Krishna\'s pastimes, abhishekam at midnight, and sumptuous prasadam feast.',
+    description: 'Grand celebration of Lord Krishna\'s appearance day. Join us for an evening of kirtan, drama performances depicting Krishna\'s pastimes, midnight abhishekam, and sumptuous prasadam feast.',
     highlight: true,
   },
   {
-    title: 'Sunday Love Feast',
+    title: 'Sunday Special Program',
     date: 'Every Sunday',
     time: '5:00 PM - 8:00 PM',
-    description: 'Weekly program featuring ecstatic kirtan, enlightening discourse on Bhagavad Gita, and a delicious multi-course prasadam feast. Everyone is welcome!',
+    description: 'Weekly program with ecstatic kirtan, enlightening discourse on Bhagavad Gita, and a delicious multi-course prasadam feast. Children through elders all benefit from this family program.',
     highlight: false,
   },
   {
     title: 'Gaura Purnima',
     date: 'March 2027',
     time: 'All Day',
-    description: 'Celebration of the appearance of Lord Chaitanya Mahaprabhu, the most merciful incarnation who spread the Hare Krishna movement 500 years ago.',
-    highlight: false,
-  },
-  {
-    title: 'Ratha Yatra',
-    date: 'July 2026',
-    time: '8:00 AM - 6:00 PM',
-    description: 'The grand chariot festival of Lord Jagannath through the streets of Thoothukudi. Massive procession with kirtan, dance, and free prasadam distribution.',
+    description: 'Celebration of the appearance of Lord Sri Chaitanya Mahaprabhu, who appeared approximately 500 years ago to spread the congregational chanting of the holy names.',
     highlight: true,
   },
   {
-    title: 'Govardhan Puja',
-    date: 'October 2026',
+    title: 'Rama Navami',
+    date: 'April 2027',
     time: '9:00 AM - 1:00 PM',
-    description: 'Celebration of Lord Krishna lifting Govardhan Hill. Features a grand Annakut (hill of food) offering with 108+ preparations.',
+    description: 'Celebration of the appearance of Lord Ramachandra, the ideal king and the seventh incarnation of Lord Vishnu.',
     highlight: false,
   },
   {
-    title: 'Kirtan Mela',
-    date: 'Monthly (Last Saturday)',
+    title: 'Narasimha Chaturdashi',
+    date: 'May 2027',
     time: '6:00 PM - 9:00 PM',
-    description: 'An evening of continuous kirtan with visiting kirtaniyas from ISKCON centers across South India. Deep, meditative chanting experience.',
+    description: 'Appearance day of Lord Narasimhadeva, the half-man half-lion incarnation who appeared to protect His devotee Prahlad Maharaj.',
+    highlight: false,
+  },
+  {
+    title: 'Balaram Purnima',
+    date: 'August 2026',
+    time: 'All Day',
+    description: 'Appearance day of Lord Balaram, the elder brother of Lord Krishna and the source of all spiritual strength.',
+    highlight: false,
+  },
+  {
+    title: 'Radhastami',
+    date: 'September 2026',
+    time: '6:00 PM - 9:00 PM',
+    description: 'Appearance day of Srimati Radharani, the eternal consort of Lord Krishna and the embodiment of pure devotional love.',
+    highlight: true,
+  },
+  {
+    title: 'Damodara Deepotsava',
+    date: 'Oct - Nov (Month-long)',
+    time: 'Evening',
+    description: 'A month-long festival of offering ghee lamps to Lord Damodara (Krishna). Devotees offer lamps daily while singing the Damodarashtakam prayers.',
+    highlight: false,
+  },
+  {
+    title: 'Bhagavad Gita Jayanti',
+    date: 'December 2026',
+    time: '6:00 PM - 9:00 PM',
+    description: 'Celebration of the day when Lord Krishna spoke the Bhagavad Gita to Arjuna on the battlefield of Kurukshetra 5,000 years ago.',
+    highlight: false,
+  },
+  {
+    title: 'Ekadashi Fasting',
+    date: 'Twice Monthly',
+    time: 'All Day',
+    description: 'Sacred fasting day observed on the 11th day of each lunar fortnight. Devotees fast from grains and beans and increase their chanting and hearing.',
     highlight: false,
   },
 ];
 ---
 
-<Layout title="Events" description="Upcoming festivals and events at ISKCON Thoothukudi">
+<Layout title="Festivals & Events" description="Upcoming festivals and events at ISKCON Tirunelveli">
   <section class="relative text-white overflow-hidden">
     <div class="absolute inset-0">
       <img
@@ -58,10 +88,10 @@ const events = [
       <div class="absolute inset-0 bg-black/60"></div>
     </div>
     <div class="relative max-w-4xl mx-auto text-center py-16 px-4">
-      <h1 class="text-3xl md:text-4xl font-bold mb-3">Events & Festivals</h1>
+      <h1 class="text-3xl md:text-4xl font-bold mb-3">Festivals & Events</h1>
       <p class="text-white/80 max-w-xl mx-auto">
-        Join us in celebrating the timeless Vedic festivals and special programs
-        throughout the year. All events are free and open to everyone.
+        Join us in celebrating the timeless Vedic festivals at Sri Sri Krishna Balaram Temple.
+        All events are free and open to everyone.
       </p>
     </div>
   </section>

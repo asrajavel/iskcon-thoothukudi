@@ -5,19 +5,19 @@ import Card from '../components/Card.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 const featuredSevas = [
-  { title: 'Abhishekam', description: 'Sacred bathing ceremony for the deities with milk, honey, and holy water.', imageUrl: 'https://donations.iskconwhitefield.org/cdn/shop/files/Untitleddesign_13.png?v=1742070333' },
-  { title: 'Archana', description: 'Chanting of 108 or 1008 names of the Lord for blessings.', imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/d/d4/Radha_Krishna_ISKCON_Tirupati.JPG' },
+  { title: 'Abhisheka Seva', description: 'Sacred bathing ceremony for the deities with milk, curd, ghee, honey, and sanctified water.', imageUrl: 'https://donations.iskconwhitefield.org/cdn/shop/files/Untitleddesign_13.png?v=1742070333' },
+  { title: 'Pushpa Seva', description: 'Sponsor beautiful flower decorations for Sri Sri Krishna Balaram. Fresh flowers offered daily.', imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/5/55/Radha_Krishna-chandra_Temple.jpg' },
 ];
 
 const upcomingEvents = [
-  { title: 'Janmashtami 2026', description: 'Grand celebration of Lord Krishna\'s appearance day with kirtan, drama, and midnight abhishekam.', badge: 'Aug 2026' },
-  { title: 'Sunday Love Feast', description: 'Weekly gathering with kirtan, discourse on Bhagavad Gita, and sumptuous prasadam.', badge: 'Every Sunday' },
+  { title: 'Sri Krishna Janmashtami', description: 'Grand celebration of Lord Krishna\'s appearance day with kirtan, drama performances, midnight abhishekam, and sumptuous prasadam feast.', badge: 'Annual' },
+  { title: 'Sunday Special Program', description: 'Weekly gathering with ecstatic kirtan, Bhagavad Gita discourse, and a delicious multi-course prasadam feast. Everyone is welcome!', badge: 'Every Sunday' },
 ];
 
 const exploreLinks = [
   { title: 'Temple Sevas', href: `${base}/sevas` },
   { title: 'Spiritual Courses', href: `${base}/courses` },
-  { title: 'Events & Festivals', href: `${base}/events` },
+  { title: 'Festivals & Events', href: `${base}/events` },
   { title: 'Contact Us', href: `${base}/contact` },
 ];
 ---
@@ -35,10 +35,10 @@ const exploreLinks = [
     </div>
     <div class="relative max-w-4xl mx-auto text-center py-28 px-4">
       <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">
-        ISKCON Thoothukudi
+        Sri Sri Krishna Balaram Temple
       </h1>
       <p class="text-lg text-white/80 max-w-2xl mx-auto mb-8">
-        ISKCON Thoothukudi — A spiritual oasis in the pearl city, dedicated to the path of Bhakti Yoga
+        ISKCON Tirunelveli — Dedicated to the path of Bhakti Yoga
         as taught by His Divine Grace A.C. Bhaktivedanta Swami Prabhupada.
       </p>
       <div class="flex flex-wrap gap-4 justify-center">
@@ -46,7 +46,7 @@ const exploreLinks = [
           Book a Seva
         </a>
         <a href={`${base}/courses`} class="border border-white/40 hover:bg-white/10 px-6 py-3 rounded-lg font-medium transition-colors">
-          Explore Courses
+          Explore Programs
         </a>
       </div>
     </div>
@@ -54,19 +54,25 @@ const exploreLinks = [
 
   <!-- Darshan Timings -->
   <section class="max-w-4xl mx-auto px-4 py-12">
-    <div class="border border-border rounded-lg p-6 flex flex-wrap items-center justify-between gap-4">
-      <div>
-        <h2 class="font-bold text-dark text-lg">Temple Darshan Timings</h2>
-        <p class="text-muted text-sm mt-1">Open for all devotees, every day</p>
-      </div>
-      <div class="flex gap-8 text-sm">
-        <div class="text-center">
-          <div class="text-purple font-bold">Morning</div>
-          <div class="text-muted">4:30 AM - 1:00 PM</div>
+    <div class="border border-border rounded-lg p-6">
+      <h2 class="font-bold text-dark text-lg mb-4">Temple Darshan Timings</h2>
+      <div class="grid sm:grid-cols-2 gap-6 text-sm">
+        <div>
+          <div class="text-purple font-bold mb-2">Morning (4:45 AM - 12:30 PM)</div>
+          <div class="space-y-1 text-muted">
+            <p>Mangala Arati Darshan: 4:45 - 5:10 AM</p>
+            <p>Sringara Darshan: 7:30 - 8:00 AM</p>
+            <p>General Darshan: 8:30 - 11:30 AM</p>
+            <p>Raj Bhog Arati: 12:00 - 12:30 PM</p>
+          </div>
         </div>
-        <div class="text-center">
-          <div class="text-purple font-bold">Evening</div>
-          <div class="text-muted">4:00 PM - 8:30 PM</div>
+        <div>
+          <div class="text-purple font-bold mb-2">Evening (4:45 PM - 8:15 PM)</div>
+          <div class="space-y-1 text-muted">
+            <p>General Darshan: 4:45 - 7:45 PM</p>
+            <p>Sandhya Arati: 7:00 PM</p>
+            <p>Shayana Arati: 8:00 - 8:15 PM</p>
+          </div>
         </div>
       </div>
     </div>
@@ -84,11 +90,29 @@ const exploreLinks = [
 
   <!-- Upcoming Events -->
   <section class="max-w-4xl mx-auto px-4 pb-12">
-    <h2 class="text-2xl md:text-3xl font-bold text-purple mb-6">Upcoming Events</h2>
+    <h2 class="text-2xl md:text-3xl font-bold text-purple mb-6">Programs & Events</h2>
     <div class="grid md:grid-cols-2 gap-6">
       {upcomingEvents.map(event => (
         <Card title={event.title} description={event.description} badge={event.badge} />
       ))}
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="max-w-4xl mx-auto px-4 pb-12">
+    <div class="border border-border rounded-lg p-6">
+      <h2 class="text-xl font-bold text-purple mb-3">About ISKCON</h2>
+      <p class="text-muted text-sm leading-relaxed">
+        The International Society for Krishna Consciousness (ISKCON) was established in 1966 in New York
+        by A.C. Bhaktivedanta Swami Prabhupada. Today, ISKCON operates over 600 temples and yoga centers
+        worldwide with millions of Krishna devotees. ISKCON is a spiritual organization dedicated to
+        serving the welfare of all people — promoting divine consciousness, ethical values, peace, and
+        harmony regardless of caste, creed, or religion.
+      </p>
+      <a href={`${base}/about`} class="inline-flex items-center gap-1 mt-3 text-sm text-purple font-medium hover:underline">
+        Learn more
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
     </div>
   </section>
 
@@ -106,5 +130,4 @@ const exploreLinks = [
       ))}
     </div>
   </section>
-
 </Layout>
