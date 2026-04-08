@@ -1,6 +1,6 @@
-# ISKCON Thoothukudi
+# ISKCON Tirunelveli
 
-Static site for ISKCON Thoothukudi (Tuticorin).
+Static site for ISKCON Tirunelveli.
 
 ## Tech stack
 
