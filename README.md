@@ -16,10 +16,3 @@ npm run dev
 ```
 
 Opens the dev server at [http://localhost:4321](http://localhost:4321).
-
-## Build
-
-```sh
-npm run build    # output in ./dist
-npm run preview  # serve production build locally
-```
